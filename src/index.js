@@ -5,13 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from '@chakra-ui/react';
 import { BrowserRouter } from "react-router-dom";
+import { StyledEngineProvider } from '@mui/material/styles';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <ChakraProvider>
+      <StyledEngineProvider injectFirst>
         <App />
+      </StyledEngineProvider>
       </ChakraProvider>
     </BrowserRouter>
   </React.StrictMode>
